@@ -2,7 +2,7 @@ import express from 'express';
 import { createProxyMiddleware } from 'http-proxy-middleware';
 
 var APP = express();
-APP.set("port", process.env.PORT || 4500);
+APP.set("port", process.env.PORT);
 APP.set("view engine", "pug");
 const BACK_HOST = process.env.HOST_NAME.replace(/^\s*|\s*$/g, "") || 'http://127.0.0.1:7000';
 APP.use(express.static('dist'));
